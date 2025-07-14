@@ -57,41 +57,54 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  id: Number,
-  showModal: Boolean,
-  img: String,
-  nome: String,
-  descricao: String,
-  preco: Number,
-  adicionais: {
-    type: Array,
-    default: () => [],
-  },
-  quantidade: Number, // <- recebendo do store
-});
+import { ref, watch } from "vue";
+import { useCartStore } from "@/stores/cartStore";
 
-import { ref } from "vue";
-import { useCartStore } from "@/stores/cartStore"; // ✅ importar o store
-
-const cartStore = useCartStore(); // ✅ instanciar o store
-const quantidadeLocal = ref(props.quantidade);
-
-function atualizarQuantidade() {
-  cartStore.updateQuantidade(props.id, quantidadeLocal.value);
-  console.log(cartStore.cart);
+// Tipagem do adicional
+interface Adicional {
+  nome: string;
 }
 
-function cartRemove(id: Number) {
+// Tipagem das props
+const props = defineProps<{
+  id: number;
+  showModal: boolean;
+  img?: string;
+  nome?: string;
+  descricao?: string;
+  preco: number;
+  adicionais?: Adicional[];
+  quantidade: number;
+}>();
+
+const cartStore = useCartStore();
+const quantidadeLocal = ref(props.quantidade);
+
+// Atualiza a store quando o input muda
+function atualizarQuantidade() {
+  cartStore.updateQuantidade(props.id, quantidadeLocal.value);
+}
+
+// Remover item do carrinho
+function cartRemove(id: number) {
   cartStore.cartRemove(id);
 }
 
-function formatarPreco(valor: number) {
+// Formata valor para BRL
+function formatarPreco(valor: number): string {
   return new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
   }).format(valor);
 }
+
+// Atualiza `quantidadeLocal` se a prop mudar
+watch(
+  () => props.quantidade,
+  (newVal) => {
+    quantidadeLocal.value = newVal;
+  }
+);
 </script>
 
 <style>

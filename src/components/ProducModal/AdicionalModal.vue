@@ -1,25 +1,27 @@
 <script setup lang="ts">
 import type { PropType } from "vue";
-
 import { useCartStore } from "@/stores/cartStore";
 
-const cartStore = useCartStore();
+const emit = defineEmits<{
+  (e: "close"): void;
+  (e: "add-to-cart"): void;
+  (e: "open-cart"): void;
+}>();
 
-const emit = defineEmits(["close", "add-to-cart", "open-cart"]);
+interface Adicional {
+  nome: string;
+  preco: number;
+  selecionado: boolean;
+}
 
 interface Product {
   id: number;
   nome: string;
   descricao: string;
   preco: number;
+  adicionais: Adicional[];
   img: string;
 }
-
-type Adicional = {
-  nome: string;
-  preco: number;
-  selecionado: boolean;
-};
 
 const props = defineProps({
   visible: Boolean,
@@ -31,18 +33,24 @@ const props = defineProps({
     type: Array as PropType<Adicional[]>,
     default: () => [],
   },
+  id: {
+    type: Number,
+    required: true,
+  },
 });
+
+const cartStore = useCartStore();
 
 const toggleAdicional = (index: number) => {
   props.adicionais[index].selecionado = !props.adicionais[index].selecionado;
 };
 
-const calcularTotal = () => {
+const calcularTotal = (): number => {
   const extras = props.adicionais
     .filter((item) => item.selecionado)
     .reduce((sum, item) => sum + item.preco, 0);
 
-  return (props.preco || 0) + extras;
+  return (props.preco ?? 0) + extras;
 };
 
 const adicionarAoCarrinho = () => {
@@ -51,16 +59,15 @@ const adicionarAoCarrinho = () => {
   );
 
   const produtoParaCarrinho: Product = {
-    id: props.id ?? Date.now(), // use id do produto ou gera um timestamp único
+    id: props.id ?? Date.now(), // fallback por segurança
     nome: props.nome ?? "",
     descricao: props.descricao ?? "",
-    preco: calcularTotal(), // preço total com adicionais
+    preco: calcularTotal(),
     adicionais: adicionaisSelecionados,
     img: props.img ?? "",
   };
 
   cartStore.cartAdd(produtoParaCarrinho);
-  console.log(cartStore.cart);
   emit("close");
   emit("open-cart");
 };
