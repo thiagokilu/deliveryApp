@@ -169,7 +169,9 @@ const resultadosBusca = computed(() => {
       "
       class="flex flex-col gap-5 items-center pb-20"
     >
-      <h2 class="text-xl font-bold mb-4 capitalize mt-5">
+      <h2
+        class="lg:text-4xl md:text-3xl text-2xl font-bold mb-4 capitalize mt-5"
+      >
         {{ categoriaSelecionada }}
       </h2>
       <div class="flex flex-wrap gap-4 items-center justify-center">
