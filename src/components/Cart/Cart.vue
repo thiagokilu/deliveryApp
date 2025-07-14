@@ -90,7 +90,7 @@ const emit = defineEmits(["close"]);
                     :descricao="item.descricao || ''"
                     :img="item.img || ''"
                     :quantidade="item.quantidade"
-                    :adicionais="item.adicionais || 'vazio'"
+                    :adicionais="item.adicionais ?? []"
                     :show-modal="false"
                   />
                 </li>
