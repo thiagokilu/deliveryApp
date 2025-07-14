@@ -58,7 +58,7 @@ const fetchCardapio = async (): Promise<void> => {
   try {
     loading.value = true;
     const response = await axios.get<Cardapio>(
-      "http://localhost:4000/cardapio"
+      "https://deliveryapp-2pr1.onrender.com/cardapio"
     );
     cardapio.value = response.data;
   } catch (err: unknown) {
