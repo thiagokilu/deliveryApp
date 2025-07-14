@@ -12,6 +12,7 @@ import Cart from "../Cart/Cart.vue";
 
 // Tipos
 type Produto = {
+  id: number;
   img: string;
   nome: string;
   descricao: string;
@@ -33,6 +34,7 @@ type Cardapio = {
 // Estado do modal
 const showModal = ref(false);
 const produtoSelecionado = ref<Produto>({
+  id: 0,
   img: "",
   nome: "",
   descricao: "",
@@ -181,6 +183,7 @@ const resultadosBusca = computed(() => {
     </section>
 
     <AdicionalModal
+      :id="produtoSelecionado.id"
       :visible="showModal"
       :img="produtoSelecionado.img"
       :nome="produtoSelecionado.nome"

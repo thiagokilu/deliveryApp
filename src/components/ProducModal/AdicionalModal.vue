@@ -21,6 +21,7 @@ interface Product {
   preco: number;
   adicionais: Adicional[];
   img: string;
+  quantidade: number;
 }
 
 const props = defineProps({
@@ -59,12 +60,13 @@ const adicionarAoCarrinho = () => {
   );
 
   const produtoParaCarrinho: Product = {
-    id: props.id ?? Date.now(), // fallback por segurança
+    id: props.id ?? Date.now(),
     nome: props.nome ?? "",
     descricao: props.descricao ?? "",
     preco: calcularTotal(),
     adicionais: adicionaisSelecionados,
     img: props.img ?? "",
+    quantidade: 1, // ✅ Corrige o erro
   };
 
   cartStore.cartAdd(produtoParaCarrinho);

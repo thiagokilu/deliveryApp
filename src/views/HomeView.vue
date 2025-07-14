@@ -14,11 +14,6 @@ interface Product {
   img: string;
 }
 
-function adicionarItem(product: Product) {
-  cartStore.cartAdd(product);
-  console.log(cartStore.cart);
-}
-
 const props = defineProps<{
   abrirCart: () => void;
 }>();
