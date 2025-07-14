@@ -1,0 +1,204 @@
+{
+  "cardapio": {
+    "lanches": [
+      {
+        "img": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnVyZ3VlcnxlbnwwfHwwfHx8MA%3D%3D",
+        "nome": "Hambúrguer Clássico",
+        "descricao": "Pão, hambúrguer bovino, queijo, alface, tomate",
+        "preco": 19.9,
+        "adicionais": [
+          { "nome": "Queijo Extra", "preco": 3.9, "selecionado": false },
+          { "nome": "Bacon", "preco": 5.9, "selecionado": false },
+          { "nome": "Ovo", "preco": 2.5, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ3VlcnxlbnwwfHwwfHx8MA%3D%3D",
+        "nome": "Cheeseburguer",
+        "descricao": "Pão, hambúrguer bovino, queijo cheddar, bacon",
+        "preco": 24.9,
+        "adicionais": [
+          { "nome": "Cebola Caramelizada", "preco": 3.5, "selecionado": false },
+          { "nome": "Molho Barbecue", "preco": 2.9, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=500&h=400&fit=crop",
+        "nome": "Big Burger",
+        "descricao": "Duplo hambúrguer, queijo, bacon, cebola roxa, molho especial",
+        "preco": 32.9,
+        "adicionais": [
+          { "nome": "Hambúrguer Extra", "preco": 12.0, "selecionado": false },
+          { "nome": "Molho Picante", "preco": 2.0, "selecionado": false },
+          { "nome": "Cebola Crispy", "preco": 4.5, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1692737349870-e3bfc704ebf9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNoaWNrZW4lMjBidXJndWVyfGVufDB8fDB8fHww",
+        "nome": "Chicken Burger",
+        "descricao": "Pão, filé de frango grelhado, queijo, alface, maionese",
+        "preco": 22.9,
+        "adicionais": [
+          { "nome": "Abacaxi Grelhado", "preco": 3.0, "selecionado": false },
+          { "nome": "Molho Honey Mustard", "preco": 2.5, "selecionado": false },
+          { "nome": "Queijo Suíço", "preco": 4.0, "selecionado": false }
+        ]
+      }
+    ],
+    "pizzas": [
+      {
+        "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&h=400&fit=crop",
+        "nome": "Pizza de Calabresa",
+        "descricao": "Molho especial, calabresa, tomate, catupiry",
+        "preco": 69.9,
+        "adicionais": [
+          {
+            "nome": "Borda Recheada (Catupiry)",
+            "preco": 10.0,
+            "selecionado": false
+          },
+          { "nome": "Extra Calabresa", "preco": 8.0, "selecionado": false },
+          { "nome": "Azeitonas Pretas", "preco": 4.0, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=500&h=400&fit=crop",
+        "nome": "Pizza Margherita",
+        "descricao": "Molho de tomate, mussarela, tomate, manjericão",
+        "preco": 65.9,
+        "adicionais": [
+          {
+            "nome": "Borda Recheada (Cheddar)",
+            "preco": 10.0,
+            "selecionado": false
+          },
+          { "nome": "Rúcula", "preco": 5.0, "selecionado": false }
+        ]
+      }
+    ],
+    "porcoes": [
+      {
+        "img": "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJpZXN8ZW58MHx8MHx8fDA%3D",
+        "nome": "Batata Frita",
+        "descricao": "Porção de batata frita crocante",
+        "preco": 15.9,
+        "adicionais": [
+          { "nome": "Cheddar e Bacon", "preco": 8.0, "selecionado": false },
+          { "nome": "Molho da Casa Extra", "preco": 3.0, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJhbmdvJTIwZnJpdG98ZW58MHx8MHx8fDA%3D",
+        "nome": "Nuggets de Frango",
+        "descricao": "10 unidades de nuggets crocantes",
+        "preco": 22.9,
+        "adicionais": [
+          { "nome": "Molho Ranch", "preco": 4.0, "selecionado": false },
+          { "nome": "Molho Agridoce", "preco": 4.0, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1625938146369-adc83368bda7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b25pb24lMjByaW5nc3xlbnwwfHwwfHx8MA%3D%3D",
+        "nome": "Anéis de Cebola",
+        "descricao": "Porção de anéis de cebola empanados e fritos",
+        "preco": 18.9,
+        "adicionais": [
+          { "nome": "Molho Barbecue", "preco": 3.5, "selecionado": false },
+          { "nome": "Molho Aioli", "preco": 4.0, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/524ef64f6115e20d61f0f158e22e07bd.jpg",
+        "nome": "Polenta Frita",
+        "descricao": "Porção de polenta frita com queijo ralado",
+        "preco": 19.9,
+        "adicionais": [
+          { "nome": "Molho de Tomate", "preco": 3.0, "selecionado": false },
+          {
+            "nome": "Queijo Parmesão Extra",
+            "preco": 5.0,
+            "selecionado": false
+          }
+        ]
+      },
+      {
+        "img": "https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3319443:1672692668/Massa-de-pastel.jpg?f=default&$p$f=787ad8d",
+        "nome": "Pastéis Variados",
+        "descricao": "5 pastéis sortidos: carne, queijo, frango, palmito",
+        "preco": 24.9,
+        "adicionais": [
+          { "nome": "Pastel Extra", "preco": 4.5, "selecionado": false },
+          { "nome": "Molho Apimentado", "preco": 2.5, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://i.panelinha.com.br/i1/bk-9785-mandioca-frita.webp ",
+        "nome": "Mandioca Frita",
+        "descricao": "Porção de mandioca frita com alho e sal",
+        "preco": 16.9,
+        "adicionais": [
+          { "nome": "Bacon e Queijo", "preco": 7.0, "selecionado": false },
+          { "nome": "Molho Verde", "preco": 3.0, "selecionado": false }
+        ]
+      }
+    ],
+    "bebidas": [
+      {
+        "img": "https://images.unsplash.com/photo-1610873167013-2dd675d30ef4?w=500&h=400&fit=crop",
+        "nome": "Refrigerante",
+        "descricao": "Lata 350ml - sabores: cola, laranja, guaraná",
+        "preco": 6.9,
+        "adicionais": [
+          { "nome": "Gelo Extra", "preco": 1.0, "selecionado": false },
+          { "nome": "Canudo Ecológico", "preco": 2.0, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9yYW5nZSUyMGp1aWNlfGVufDB8fDB8fHww",
+        "nome": "Suco Natural",
+        "descricao": "Copo 400ml - sabores: laranja, limão, maracujá, acerola",
+        "preco": 8.9,
+        "adicionais": [
+          { "nome": "Açúcar Extra", "preco": 1.0, "selecionado": false },
+          { "nome": "Gelo Extra", "preco": 1.0, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500&h=400&fit=crop",
+        "nome": "Cerveja",
+        "descricao": "Lata 350ml - marcas nacionais geladas",
+        "preco": 7.9,
+        "adicionais": [
+          { "nome": "Porção de Amendoim", "preco": 4.0, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=500&h=400&fit=crop",
+        "nome": "Milkshake",
+        "descricao": "Copo 300ml - sabores: chocolate, morango, baunilha",
+        "preco": 12.9,
+        "adicionais": [
+          { "nome": "Chantilly", "preco": 3.0, "selecionado": false },
+          { "nome": "Cobertura Extra", "preco": 2.5, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aWNlZCUyMHRlYXxlbnwwfHwwfHx8MA%3D%3D",
+        "nome": "Chá Gelado",
+        "descricao": "Copo 400ml - sabores: pêssego, limão, frutas vermelhas",
+        "preco": 7.9,
+        "adicionais": [
+          { "nome": "Açúcar Extra", "preco": 1.0, "selecionado": false },
+          { "nome": "Rodela de Limão", "preco": 1.5, "selecionado": false }
+        ]
+      },
+      {
+        "img": "https://ibassets.com.br/ib.item.image.large/l-fd83a662da92460c81fae7b06f0f8bb2.jpeg",
+        "nome": "Água Mineral",
+        "descricao": "Garrafa 500ml - com ou sem gás",
+        "preco": 4.9,
+        "adicionais": [{ "nome": "Limão", "preco": 1.5, "selecionado": false }]
+      }
+    ]
+  }
+}
