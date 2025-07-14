@@ -137,6 +137,10 @@ const resultadosBusca = computed(() => {
       </button>
     </div>
 
+    <div class="flex items-center justify-center mt-20">
+      <h1 v-if="loading" class="text-4xl text-black">Loading...</h1>
+    </div>
+
     <!-- Se estiver buscando, mostra só os resultados -->
     <section v-if="termoBusca" class="flex flex-col items-center pb-10">
       <h2 class="text-xl font-bold mb-4 mt-5">Resultados da busca</h2>
