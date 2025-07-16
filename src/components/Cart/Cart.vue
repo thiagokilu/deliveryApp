@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useCartStore } from "@/stores/cartStore";
 import CartProduct from "../CartProduct/CartProduct.vue";
+import { computed } from "vue";
 
 const cartStore = useCartStore();
 
@@ -23,6 +24,27 @@ const props = defineProps<{
   visible: boolean;
 }>();
 const emit = defineEmits(["close"]);
+
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+import { useOrderStore } from "@/stores/orderStore";
+
+const orderStore = useOrderStore();
+
+async function finalizarCompra() {
+  // 1. Salva o pedido e pega o ID gerado
+  const orderId = orderStore.saveOrder([...cartStore.cart]);
+
+  // 2. Navega para a rota com o ID do pedido
+  await router.push({ name: "order-details", params: { id: orderId } });
+
+  // 3. Limpa o carrinho depois da navegação
+  cartStore.clearCart();
+  emit("close");
+}
+const hasItems = computed(() => cartStore.cart.length > 0);
 </script>
 
 <template>
@@ -110,6 +132,8 @@ const emit = defineEmits(["close"]);
               Frete e impostos calculados no checkout.
             </p>
             <button
+              @click="finalizarCompra"
+              v-if="hasItems"
               class="w-full bg-[#d61326] border border-transparent rounded-md py-3 px-4 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors cursor-pointer"
             >
               Finalizar compra

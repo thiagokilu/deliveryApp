@@ -3,3 +3,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media print {
+  .app-header {
+    display: none !important;
+  }
+}

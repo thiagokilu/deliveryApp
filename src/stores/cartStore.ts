@@ -58,6 +58,9 @@ export const useCartStore = defineStore("cart", {
         item.quantidade = novaQuantidade;
       }
     },
+    clearCart() {
+      this.cart = [];
+    },
   },
   persist: true, // 👈 ativa persistência automática
 });

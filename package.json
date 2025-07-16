@@ -19,6 +19,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "axios": "^1.10.0",
     "json-server": "^1.0.0-beta.3",
+    "nanoid": "^5.1.5",
     "pinia": "^3.0.3",
     "pinia-plugin-persistedstate": "^4.4.1",
     "tailwindcss": "^4.1.11",

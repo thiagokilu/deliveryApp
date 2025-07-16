@@ -8,22 +8,24 @@ const props = defineProps<{
 }>();
 </script>
 <template>
-  <header class="bg-[#e32636] text-white p-4">
+  <header class="app-header bg-[#e32636] text-white p-4">
     <div
       class="flex flex-col sm:flex-row sm:items-center justify-between w-full max-w-screen-xl mx-auto gap-4"
     >
       <!-- Logo + Informações -->
       <div class="flex flex-row sm:flex-row gap-4">
         <!-- Logo -->
-        <div
-          class="bg-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shrink-0"
-        >
-          <img
-            src="../../assets/images/logo.png"
-            alt="Logo Pizza Maxi"
-            class="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded-full"
-          />
-        </div>
+        <router-link to="/">
+          <div
+            class="bg-white w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shrink-0"
+          >
+            <img
+              src="../../assets/images/logo.png"
+              alt="Logo Pizza Maxi"
+              class="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded-full"
+            />
+          </div>
+        </router-link>
 
         <!-- Texto -->
         <div class="flex flex-col text-sm">
