@@ -138,7 +138,7 @@ const resultadosBusca = computed(() => {
     </div>
 
     <div class="flex items-center justify-center mt-20">
-      <h1 v-if="loading" class="text-4xl text-black">Loading...</h1>
+      <div v-if="loading" class="loader"></div>
     </div>
 
     <!-- Se estiver buscando, mostra só os resultados -->
@@ -229,5 +229,23 @@ const resultadosBusca = computed(() => {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top: 6px solid #e50914; /* Netflix red */
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>
